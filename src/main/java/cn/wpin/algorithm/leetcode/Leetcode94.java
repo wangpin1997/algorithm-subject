@@ -44,7 +44,7 @@ public class Leetcode94 {
      * @param root
      * @return
      */
-    public static List<Integer> inorderTraversal0(TreeNode root) {
+    private static List<Integer> inorderTraversal0(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
         TreeNode cur = root;
