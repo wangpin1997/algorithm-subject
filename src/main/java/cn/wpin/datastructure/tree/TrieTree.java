@@ -13,27 +13,27 @@ public class TrieTree {
 
     private TrieTreeNode root;
 
-    public TrieTree() {
+    private TrieTree() {
         root = new TrieTreeNode();
     }
 
     public static void main(String[] args) {
         String[] strings = new String[]{"code", "demo", "cod", "coding"};
         TrieTree trieTree = new TrieTree();
-        for (int i = 0; i < strings.length; i++) {
-            trieTree.insert(strings[i]);
+        for (String string : strings) {
+            trieTree.insert(string);
         }
         System.out.println(trieTree.root);
         System.out.println(trieTree.search("demo"));
         System.out.println(trieTree.search("dem"));
         System.out.println(trieTree.startWith("demoq"));
-
-
+        System.out.println(trieTree.startWith("demo"));
     }
 
     /**
      * 前缀树添加节点
-     * @param word
+     *
+     * @param word 插入的关键字
      */
     private void insert(String word) {
         TrieTreeNode node = root;
@@ -67,8 +67,9 @@ public class TrieTree {
 
     /**
      * 判断前缀树是否有以prefix开头的
-     * @param prefix
-     * @return
+     *
+     * @param prefix 前缀
+     * @return boolean
      */
     private boolean startWith(String prefix) {
         TrieTreeNode node = root;
@@ -88,9 +89,9 @@ public class TrieTree {
         Boolean isTrie;
         Map<Character, TrieTreeNode> children;
 
-        public TrieTreeNode() {
+        TrieTreeNode() {
             isTrie = true;
-            children = new HashMap<>();
+            children = new HashMap<>(16);
         }
     }
 }
