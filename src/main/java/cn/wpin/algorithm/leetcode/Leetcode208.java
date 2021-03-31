@@ -10,7 +10,6 @@ public class Leetcode208 {
 
     public static void main(String[] args) {
 
-
     }
 
 }
