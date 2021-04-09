@@ -74,6 +74,7 @@ public class Offer01 {
      */
     public static class Singleton4 {
 
+
         private static Singleton4 singleton4;
 
         static {
@@ -117,6 +118,9 @@ public class Offer01 {
         SINGLETON6
     }
 
+    /**
+     * 双重锁单例
+     */
     public static class Singleton7 {
         private static volatile Singleton7 singleton7 = null;
 
@@ -137,13 +141,13 @@ public class Offer01 {
     }
 
     public static void main(String[] args) {
-        System.out.println(Singleton1.getInstance()==Singleton1.getInstance());
-        System.out.println(Singleton2.getInstance()==Singleton2.getInstance());
-        System.out.println(Singleton3.getInstance()==Singleton3.getInstance());
-        System.out.println(Singleton4.getInstance()==Singleton4.getInstance());
-        System.out.println(Singleton5.getInstance()==Singleton5.getInstance());
-        System.out.println(Singleton6.SINGLETON6==Singleton6.SINGLETON6);
-        System.out.println(Singleton7.getInstance()==Singleton7.getInstance());
+        System.out.println(Singleton1.getInstance() == Singleton1.getInstance());
+        System.out.println(Singleton2.getInstance() == Singleton2.getInstance());
+        System.out.println(Singleton3.getInstance() == Singleton3.getInstance());
+        System.out.println(Singleton4.getInstance() == Singleton4.getInstance());
+        System.out.println(Singleton5.getInstance() == Singleton5.getInstance());
+        System.out.println(Singleton6.SINGLETON6 == Singleton6.SINGLETON6);
+        System.out.println(Singleton7.getInstance() == Singleton7.getInstance());
     }
 
 
